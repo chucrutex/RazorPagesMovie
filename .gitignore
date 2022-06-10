@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # adicionados manualmente
-Part2NuGetEFInstaller.bat
+*.bat
 
 # User-specific files
 *.rsuser
