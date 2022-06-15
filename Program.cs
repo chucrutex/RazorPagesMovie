@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using RazorPagesMovie.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,6 +20,13 @@ else
 
 
 var app = builder.Build();
+
+// garante que o contexto será liberado após o uso
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
