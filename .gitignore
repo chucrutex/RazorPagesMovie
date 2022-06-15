@@ -6,7 +6,7 @@
 # adicionados manualmente
 *.bat
 Migrations/*
-.db
+.db*
 
 # User-specific files
 *.rsuser
