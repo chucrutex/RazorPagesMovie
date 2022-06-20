@@ -17,8 +17,14 @@ namespace RazorPagesMovie.Models
         [Display(Name = "Gênero")]
         public string Genre { get; set; } = string.Empty;
 
+        // investimento do filme
         [Display(Name = "Investimento")]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
+
+        // avaliação do filme
+        [Display(Name = "Avaliação")]
+        public string Rating { get; set; } = string.Empty;
+        
     }
 }
